@@ -295,13 +295,6 @@
 				];
 				qcom,mdss-dsi-dispparam-hbm-fod-off-command-state = "dsi_hs_mode";
 				qcom,mdss-dsi-dispparam-hbm-fod-on-command = [
-					/* Test Key Enable: F0 */
-					39 00 00 00 00 00 03 F0 5A 5A
-					/* Elvss Dimming Setting */
-					15 00 00 00 00 00 02 B0 03
-					15 00 00 00 00 00 02 B7 C9
-					/* Test Key Disable: F0 */
-					39 00 00 00 00 00 03 F0 A5 A5
 					/* HBM on + Disable brightness dimming */
 					15 01 00 00 10 00 02 53 E0
 				];
