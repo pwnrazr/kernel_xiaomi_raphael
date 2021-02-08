@@ -500,14 +500,10 @@ static irqreturn_t bcl_handle_irq(int irq, void *data)
 
 	bcl_perph = perph_data->dev;
 	bcl_read_register(bcl_perph, BCL_IRQ_STATUS, &irq_status);
-
-	if (irq_status & perph_data->status_bit_idx) {
-		pr_debug("Irq:%d triggered for bcl type:%s. status:%u\n",
+	pr_debug("Irq:%d triggered for bcl type:%s. status:%u\n",
 			irq, bcl_int_names[perph_data->type],
 			irq_status);
-		of_thermal_handle_trip_temp(perph_data->tz_dev,
-				perph_data->status_bit_idx);
-	}
+	of_thermal_handle_trip(perph_data->tz_dev);
 
 	return IRQ_HANDLED;
 
