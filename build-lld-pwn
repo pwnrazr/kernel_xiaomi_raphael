@@ -3,7 +3,7 @@
 #https://github.com/UtsavBalar1231/ script. Modified to work for my machine
 
 # HOME path
-HOME=/home/pwnrazr
+HOME=/home/pwn
 # Kernel Output
 OUT_DIR=out
 BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
